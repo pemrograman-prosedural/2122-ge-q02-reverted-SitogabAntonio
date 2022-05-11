@@ -1,5 +1,5 @@
-// NIM - Name
-// NIM - Name
+// 12S21015 - Sitogab Antonio Octavianus Girsang
+// 12S21049 - Jesika Audina Purba
 
 #include <stdio.h>
 #include <string.h>
@@ -9,21 +9,19 @@
 #include "libs/student.h"
 
 int main(int _argc, char **_argv){
-    
     struct dorm_t *dorms = malloc(256 * sizeof(struct dorm_t));
     struct student_t *students = malloc(256 * sizeof(struct student_t));
-    struct data_1;
-
     unsigned short capacity;
     char *data;
     int idx_s, idx_d;
     int std=0, dr=0;
-    char input[100];
-    char id[15];
-    char student_name[30];
+
+    char input[256];
+    char id[12];
+    char student_name[25];
     char year[5];
     char dorm_name[25];
-
+    
     do
     {
         fflush(stdin);

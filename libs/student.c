@@ -19,13 +19,11 @@ void print_student(struct student_t *_student, int count){
         if (_student[i].gender==GENDER_MALE){
             printf("%s|", _student[i].id);
             printf("%s|", _student[i].name);
-            printf("%s|", _student[i].year);
-            printf("male\n");
+            printf("%s|male", _student[i].year);
         } else if (_student[i].gender==GENDER_FEMALE){
             printf("%s|", _student[i].id);
             printf("%s|", _student[i].name);
-            printf("%s|", _student[i].year);
-            printf("female\n");
+            printf("%s|female", _student[i].year);
         }
     }
 }
@@ -35,33 +33,29 @@ void print_student_detail(struct student_t *_student, int count){
         if (_student[i].dorm == NULL){
             if (_student[i].gender==GENDER_MALE){
                 printf("%s|", _student[i].id);
-                printf("%s|", _student[i].name);
-                printf("%s|", _student[i].year);
-                printf("male|");
-                printf("unassigned\n");
+                printf("%s|",_student[i].name);
+                printf("%s|male|unassign\n", _student[i].year);
             } else if (_student[i].gender==GENDER_FEMALE){
                 printf("%s|", _student[i].id);
-                printf("%s|", _student[i].name);
-                printf("%s|", _student[i].year);
-                printf("female|");
-                printf("unassigned\n");
+                printf("%s|",_student[i].name);
+                printf("%s|female|unassign\n", _student[i].year);
+            }
         } else {
             if (_student[i].gender==GENDER_MALE){
                 printf("%s|", _student[i].id);
-                printf("%s|", _student[i].name);
-                printf("%s|", _student[i].year);
-                printf("male|");
+                printf("%s|",_student[i].name);
+                printf("%s|",_student[i].year);
+                printf("%s|male|", _student[i].year);
                 printf("%s\n", _student[i].dorm->name);
             } else if (_student[i].gender==GENDER_FEMALE){
                 printf("%s|", _student[i].id);
-                printf("%s|", _student[i].name);
-                printf("%s|", _student[i].year);
-                printf("female|");
+                printf("%s|",_student[i].name);
+                printf("%s|",_student[i].year);
+                printf("%s|female|", _student[i].year);
                 printf("%s\n", _student[i].dorm->name);
             }
         }
     }
-}
 }
 void assign_student(struct student_t *_student,struct dorm_t *_dorm, char *id, char *dorm_name){
     if (_dorm->residents_num < _dorm->capacity){
