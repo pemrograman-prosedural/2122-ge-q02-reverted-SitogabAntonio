@@ -14,12 +14,12 @@ void print_dorm(struct dorm_t *_dorm, int count){
     for (int i = 0; i < count; i++)
     {
         if (_dorm[i].gender==GENDER_MALE){
-            printf("%s|%d|male|%d\n", _dorm[i].name, _dorm[i].capacity, _dorm[i].residents_num);
+            printf("%s|", _dorm[i].name);
             printf("%d|", _dorm[i].capacity);
             printf("male|");
             printf("%d\n", _dorm[i].residents_num);
         } else if(_dorm[i].gender==GENDER_FEMALE){
-            printf("%s|%d|male|%d\n", _dorm[i].name, _dorm[i].capacity, _dorm[i].residents_num);
+            printf("%s|", _dorm[i].name);
             printf("%d|", _dorm[i].capacity);
             printf("female|");
             printf("%d\n", _dorm[i].residents_num);
@@ -30,12 +30,12 @@ void print_dorm_detail(struct dorm_t *_dorm, int count){
     for (int i = 0; i < count; i++)
     {
         if (_dorm[i].gender==GENDER_MALE){
-            printf("%s|%d|male|%d\n", _dorm[i].name, _dorm[i].capacity, _dorm[i].residents_num);
+            printf("%s|", _dorm[i].name);
             printf("%d|", _dorm[i].capacity);
             printf("male|");
             printf("%d\n", _dorm[i].residents_num);
         } else if(_dorm[i].gender==GENDER_FEMALE){
-            printf("%s|%d|male|%d\n", _dorm[i].name, _dorm[i].capacity, _dorm[i].residents_num);
+            printf("%s|", _dorm[i].name);
             printf("%d|", _dorm[i].capacity);
             printf("female|");
             printf("%d\n", _dorm[i].residents_num);
