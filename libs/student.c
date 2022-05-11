@@ -75,6 +75,7 @@ void move_student(struct student_t *_student, struct dorm_t *_dorm, struct dorm_
         }
     }
 }
+
 void unassign_student(struct student_t *_student, struct dorm_t *_dorm){
     _student->dorm = NULL;
     _dorm->residents_num--;
