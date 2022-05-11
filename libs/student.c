@@ -62,6 +62,7 @@ void print_student_detail(struct student_t *_student, int count){
         }
     }
 }
+}
 void assign_student(struct student_t *_student,struct dorm_t *_dorm, char *id, char *dorm_name){
     if (_dorm->residents_num < _dorm->capacity){
         if (_student->gender == _dorm->gender){
@@ -82,5 +83,4 @@ void move_student(struct student_t *_student, struct dorm_t *_dorm, struct dorm_
 void unassign_student(struct student_t *_student, struct dorm_t *_dorm){
     _student->dorm = NULL;
     _dorm->residents_num--;
-}
 }
