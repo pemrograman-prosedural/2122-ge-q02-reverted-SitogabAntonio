@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 
+
 struct student_t create_student(char *_id, char *_name, char *_year,enum gender_t _gender){
     struct student_t s;
     strcpy(s.id, _id);
