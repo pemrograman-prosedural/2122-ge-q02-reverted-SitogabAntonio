@@ -27,4 +27,3 @@ void assign_student(struct student_t *_student, struct dorm_t *_dorm, char *id, 
 void move_student(struct student_t *_student, struct dorm_t *_dorm, struct dorm_t *old_dorm, char *id, char *dorm_name);
 void unassign_student(struct student_t *_student, struct dorm_t *_dorm);
 #endif
-

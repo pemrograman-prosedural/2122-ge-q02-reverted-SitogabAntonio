@@ -9,8 +9,11 @@
 #include "libs/student.h"
 
 int main(int _argc, char **_argv){
+    
     struct dorm_t *dorms = malloc(256 * sizeof(struct dorm_t));
     struct student_t *students = malloc(256 * sizeof(struct student_t));
+    struct data_1;
+
     unsigned short capacity;
     char *data;
     int idx_s, idx_d;
@@ -20,7 +23,7 @@ int main(int _argc, char **_argv){
     char student_name[30];
     char year[5];
     char dorm_name[25];
-    
+
     do
     {
         fflush(stdin);
