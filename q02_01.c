@@ -81,8 +81,8 @@ int main(int _argc, char **_argv){
             strcpy(id, data);
             data = strtok(NULL, "#");
             strcpy(dorm_name, data);
-            idx_s = -99;
-            idx_d = -99;
+            idx_s = -1;
+            idx_d = -1;
             for (int i = 0; i < std; i++)
             {
                 if(strcmp(students[i].id, id)==0){
@@ -97,7 +97,7 @@ int main(int _argc, char **_argv){
                     break;
                 }
             }
-            if (idx_s!=-99 && idx_d!=-99)
+            if (idx_s!=-1 && idx_d!=-1)
             {
                 assign_student(&students[idx_s], &dorms[idx_d], id, dorm_name);
             }
@@ -106,8 +106,8 @@ int main(int _argc, char **_argv){
             strcpy(id, data);
             data = strtok(NULL, "#");
             strcpy(dorm_name, data);
-            idx_s = -99;
-            idx_d = -99;
+            idx_s = -1;
+            idx_d = -1;
             for (int i = 0; i < std; i++){
                 if(strcmp(students[i].id, id)==0){
                     idx_s = i;
@@ -120,7 +120,7 @@ int main(int _argc, char **_argv){
                     break;
                 }
             }
-            if (idx_s!=-99 && idx_d!=-99){
+            if (idx_s!=-1 && idx_d!=-1){
                 if (students[idx_s].dorm==NULL){
                     assign_student(&students[idx_s], &dorms[idx_d], id, dorm_name);
                 } else {
@@ -135,14 +135,14 @@ int main(int _argc, char **_argv){
         } else if (strcmp(data, "dorm-empty")==0){
             data = strtok(NULL, "#");
             strcpy(dorm_name, data);
-            idx_d = -99;
+            idx_d = -1;
             for (int i = 0; i < dr; i++){
                 if(strcmp(dorms[i].name, dorm_name)==0){
                     idx_d = i;
                     break;
                 }
             }
-            if (idx_d!=-99){
+            if (idx_d!=-1){
                 for (int i = 0; i < std; i++){
                     if (students[i].dorm==NULL){
                         continue;
